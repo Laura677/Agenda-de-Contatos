@@ -1,0 +1,5 @@
+{"name":"agenda-contatos-projeto06",
+"version":"1.0.0",
+"type":"module",
+"scripts":{"start":"node app.js"},
+"dependencies":{"sqlite3":"^5.1.7"}}

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Agenda de Contatos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="container">
+        <header>
+            <div>
+                <p class="eyebrow">DESENVOLVIMENTO WEB III · PROJETO 06</p>
+                <h1>Agenda de contatos</h1>
+                <p class="sub">Cadastre, pesquise e organize seus contatos.</p>
+            </div><span class="count" id="total">0 contatos</span>
+        </header>
+        <section class="panel">
+            <h2 id="form-title">Novo contato</h2>
+            <form id="form">
+                <div class="fields"><label>Nome completo<input name="nome" required maxlength="120"
+                            placeholder="Nome do contato"></label><label>E-mail<input name="email" type="email" required
+                            placeholder="email@exemplo.com"></label><label>Telefone<input name="telefone" required
+                            placeholder="(11) 99999-9999"></label><label>Data de nascimento<input name="data_nascimento"
+                            type="date" required></label><label>CEP <small>Consulta automática pelo ViaCEP</small><input
+                            name="cep" id="cep" inputmode="numeric" maxlength="9" required
+                            placeholder="00000-000"></label><label>Rua / Logradouro<input name="logradouro"
+                            required></label><label>Número<input name="numero" required></label><label>Complemento<input
+                            name="complemento" placeholder="Opcional"></label><label>Bairro<input name="bairro"
+                            required></label><label>Cidade<input name="cidade" required></label><label>UF<input
+                            name="uf" maxlength="2" required placeholder="SP"></label></div>
+                <p id="cep-status" class="hint" aria-live="polite"></p>
+                <div class="actions"><button type="submit" id="save">Salvar contato</button><button type="button"
+                        id="cancel" class="secondary" hidden>Cancelar edição</button></div>
+            </form>
+        </section>
+        <section class="panel">
+            <div class="list-head">
+                <h2>Meus contatos</h2><input id="search" type="search"
+                    placeholder="Buscar por nome, e-mail ou telefone">
+            </div>
+            <div id="message" role="status"></div>
+            <div id="list" class="contact-list"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
